@@ -6,7 +6,7 @@ app = FastAPI()
 def read_root():
     return {"message": "Hello, FastAPI!"}
 
-@app.get("/ping")
+@app.get("/test ping")
 def ping():
     return {"status": "ok"}
 
@@ -14,3 +14,8 @@ def ping():
 def calculate_bmi(weight: float, height: float):
     bmi = weight / (height ** 2)
     return {"bmi": round(bmi, 2)}
+
+@app.get("/luas segitiga")
+def calculate_triangle_area(base: float, height: float):
+    area = 0.5 * base * height
+    return {"area": area}
